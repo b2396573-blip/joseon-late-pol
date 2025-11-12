@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조선 후기 정치 변동 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #fefcf3;
+            color: #222; /* ✅ 모든 텍스트 진한 색상 */
+            font-weight: 700; /* ✅ 모든 글씨 굵게 */
+            line-height: 1.75;
+        }
+
+        /* 파스텔 배경 */
+        .pastel-sky { background-color: #dbeafe; }
+        .pastel-mint { background-color: #a7f3d0; }
+        .pastel-peach { background-color: #fca5a5; }
+        .pastel-lavender { background-color: #c4b5fd; }
+
+        /* 스크롤 애니메이션 */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+            transition-delay: var(--delay, 0s);
+        }
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 타이틀 확대 효과 */
+        @keyframes subtleZoom {
+            0% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.02); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.95; }
+        }
+        .title-animate {
+            animation: subtleZoom 5s ease-in-out infinite;
+        }
+
+        /* 카드 */
+        .history-card {
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .history-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 네비게이션 */
+        #navbar a {
+            transition: all 0.3s ease;
+        }
+        #navbar a.active, #navbar a:hover {
+            background-color: #4f46e5;
+            color: #fff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-indigo-300">
+    <!-- 네비게이션 -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-xl py-3 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-2 sm:gap-6">
+            <a href="#section1" class="nav-item text-xs sm:text-base font-bold px-4 py-2 rounded-full text-indigo-700 bg-indigo-100">I. 국가 재건</a>
+            <a href="#section2" class="nav-item text-xs sm:text-base font-bold px-4 py-2 rounded-full text-indigo-700 bg-indigo-100">II. 붕당 정치 변질</a>
+            <a href="#section3" class="nav-item text-xs sm:text-base font-bold px-4 py-2 rounded-full text-indigo-700 bg-indigo-100">III. 탕평 정치</a>
+            <a href="#section4" class="nav-item text-xs sm:text-base font-bold px-4 py-2 rounded-full text-indigo-700 bg-indigo-100">IV. 세도 정치</a>
+        </div>
+    </nav>
+
+    <!-- 메인 타이틀 -->
+    <header class="h-screen flex flex-col justify-center items-center text-center bg-indigo-50 relative overflow-hidden">
+        <div class="z-10 px-6 max-w-5xl">
+            <p class="text-3xl sm:text-4xl font-extrabold text-indigo-600 mb-2 title-animate">[시간 여행 승선 완료]</p>
+            <h1 class="text-8xl sm:text-9xl font-black text-indigo-900 mb-8 tracking-tighter title-animate">격변의 조선 후기</h1>
+            <p class="text-2xl sm:text-3xl text-gray-700 font-medium">
+                양 난 이후부터 세도 정치에 이르는 정치 대격변의 시대를 탐험합니다.
+            </p>
+        </div>
+    </header>
+
+    <!-- 1단계: 국가 재건 -->
+    <section id="section1" class="min-h-screen py-24 px-4 md:px-12 bg-pastel-mint">
+        <div class="max-w-4xl mx-auto">
+            <div class="scroll-animate mb-20 text-center" style="--delay:0.1s;">
+                <h2 class="text-5xl font-extrabold text-teal-800 mb-4 inline-block pb-1">여정 I. 전후 복구와 비변사 강화</h2>
+                <p class="text-xl text-gray-700">전쟁의 폐허를 딛고 국가를 재건하는 과정에서, 비변사가 최고 권력 기구로 자리 잡다.</p>
+            </div>
+
+            <!-- 비변사 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.3s;">
+                <h3 class="text-3xl font-black text-teal-700 mb-4 border-b-2 pb-2 border-teal-200 flex items-center">
+                    <span class="mr-3 text-4xl">⚔️</span> 비변사: 상설 최고 권력 기구
+                </h3>
+                <p class="text-lg text-gray-700">
+                    <span class="font-bold text-teal-600">본래 임시 국방 기구</span>였던 비변사는, 임진왜란 이후 <span class="font-bold">국방, 외교, 산업, 인사 등 국가의 모든 주요 정책을 결정</span>하는 상설 기구로 확대되었습니다. 이는 <span class="font-bold">비상사태가 일상화</span>된 조선 후기 사회상을 반영합니다.
+                </p>
+                <div class="mt-5 p-4 bg-teal-50 rounded-xl text-base italic text-gray-700">
+                    결과: 전통적인 합의 기구인 <span class="font-bold">의정부의 기능이 완전히 축소</span>되고, 소수의 <span class="font-bold">비변사 당상(고위 관료)</span>에게 권력이 집중되어 정치 운영의 비효율성과 부패의 기반이 마련되었습니다.
+                </div>
+                <div class="mt-5 p-4 bg-teal-50 rounded-xl text-base italic text-gray-700">
+                    사료: “요즈음 큰 일이건 작은 일이건 비변사에서 모두 다룹니다. 의정부는 한갓 이름뿐이고 6조는 할 일을 모두 빼앗기고 말았습니다. 이름은 변방 방비(비변)를 위해서라 하면서 과거나 비빈 간택까지도 모두 여기서 처리합니다.” - 『효종실록』
+                </div>
+            </div>
+
+            <!-- 대동법 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.5s;">
+                <h3 class="text-3xl font-black text-teal-700 mb-4 border-b-2 pb-2 border-teal-200 flex items-center">
+                    <span class="mr-3 text-4xl">💰</span> 대동법: 세제 개혁의 시작
+                </h3>
+                <p class="text-lg text-gray-700">
+                    농민의 부담을 가중시키던 <span class="font-bold">공납(특산물 납부)</span>의 폐단을 해결하고자, <span class="font-bold">광해군</span> 때 경기도에서 시작되어 <span class="font-bold">숙종</span> 때 전국적으로 시행되었습니다. 세금 기준이 <span class="font-bold">토지 소유</span>로 바뀌었고, 납부 물품도 쌀, 베, 동전 등으로 통일되었습니다.
+                </p>
+                <div class="mt-5 p-4 bg-teal-50 rounded-xl text-base italic text-gray-700">
+                    효과: 농민들의 부담이 크게 줄었고, 국가에 물품을 조달하는 전문 상인인 <span class="font-bold">공인</span>이 등장하면서 <span class="font-bold text-teal-600">상품 화폐 경제가 발달</span>하는 결정적인 계기가 되었습니다.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2단계: 붕당 정치의 변질과 탕평책의 대두 -->
+    <section id="section2" class="min-h-screen py-24 px-4 md:px-12 bg-pastel-peach">
+        <div class="max-w-4xl mx-auto">
+            <div class="scroll-animate mb-20 text-center" style="--delay:0.1s;">
+                <h2 class="text-5xl font-extrabold text-rose-800 mb-4 inline-block pb-1">
+                    여정 II. 붕당의 폐해와 일당 전제화
+                </h2>
+                <p class="text-xl text-gray-700">
+                    붕당 간의 견제와 균형이 깨지고, 왕의 개입으로 정치가 일당 전제화로 변질되다.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- 예송과 환국 -->
+                <div class="history-card bg-white/95 p-8 rounded-3xl scroll-animate" style="--delay:0.3s;">
+                    <h3 class="text-3xl font-black text-rose-700 mb-4 flex items-center">
+                        <span class="mr-3 text-4xl">🕯️</span> 예송과 환국
+                    </h3>
+                    <p class="text-gray-700 text-lg">
+                        <span class="font-bold">예송 논쟁</span> (상복 기간 논쟁)과 <span class="font-bold">환국 정치</span> (숙종의 급격한 정권 교체)를 겪으며, 붕당 정치는 <span class="font-bold">상대방을 인정하는 공론 정치</span>에서 <span class="font-bold">상대 세력을 완전히 제거</span>하는 정쟁으로 변질되었습니다.
+                    </p>
+                    <div class="mt-4 p-3 bg-rose-50 rounded-xl text-base italic text-gray-700 border-l-4 border-rose-300">
+                        사료: “싸움만을 서로 계속하고 있으니, 이러면 나라가 장차 어떻게 되겠는가?” - 『영조실록』
+                    </div>
+                </div>
+
+                <!-- 탕평론 -->
+                <div class="history-card bg-white/95 p-8 rounded-3xl scroll-animate" style="--delay:0.5s;">
+                    <h3 class="text-3xl font-black text-rose-700 mb-4 flex items-center">
+                        <span class="mr-3 text-4xl">🤝</span> 탕평론의 대두
+                    </h3>
+                    <p class="text-gray-700 text-lg">
+                        붕당의 격화로 왕권이 약화되고 국가 기강이 흔들리자, <span class="font-bold">숙종</span>에 의해 탕평의 논의가 처음 제기되었으며, <span class="font-bold">영조와 정조</span> 시기에 왕권을 강화하는 핵심 정책으로 실행되었습니다.
+                    </p>
+                    <div class="mt-4 p-3 bg-rose-50 rounded-xl text-base italic text-gray-700 border-l-4 border-rose-300">
+                        목표: <span class="font-bold">강력한 왕권을 바탕으로 붕당 정치의 폐해를 극복</span>하고 정치를 안정시키는 것이었습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3단계: 영조, 정조의 탕평 정치 -->
+    <section id="section3" class="min-h-screen py-24 px-4 md:px-12 bg-pastel-lavender">
+        <div class="max-w-4xl mx-auto">
+            <div class="scroll-animate mb-20 text-center" style="--delay:0.1s;">
+                <h2 class="text-5xl font-extrabold text-indigo-800 mb-4 inline-block pb-1">
+                    여정 III. 강력한 군주의 개혁과 탕평
+                </h2>
+                <p class="text-xl text-gray-700">
+                    개혁의 불꽃을 지폈던 영조와 정조의 서로 다른 탕평 방식과 주요 정책.
+                </p>
+            </div>
+
+            <!-- 영조 카드 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.3s;">
+                <h3 class="text-3xl font-black text-blue-700 mb-4 flex items-center">
+                    <span class="mr-3 text-4xl">⚖️</span> 영조: 완론 탕평과 균역법
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="list-disc list-inside ml-4 space-y-3 text-lg text-gray-700">
+                            <li><span class="font-bold">완론 탕평:</span> <span class="font-bold">이조전랑의 권한을 약화</span>하고 여러 붕당의 인재를 등용하여 붕당의 화합을 유도하는 <span class="font-bold">온건한 방식</span>을 취했습니다. 성균관에 <span class="font-bold">탕평비</span>를 세워 의지를 천명했습니다.</li>
+                            <li><span class="font-bold">균역법:</span> 군역의 부담을 <span class="font-bold">군포 2필에서 1필</span>로 줄여 상민의 부담을 경감했습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="p-4 bg-blue-50 rounded-xl text-base italic text-gray-700 h-full">
+                            사료: “이 서원을 건립한 것이... 사사로운 이익을 이루려는 데 지나지 않으니 도리어 옛날의 현인에게 오욕을 끼치는 것이다.” (붕당의 근거지인 서원을 정리)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 정조 카드 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.5s;">
+                <h3 class="text-3xl font-black text-emerald-700 mb-4 flex items-center">
+                    <span class="mr-3 text-4xl">👑</span> 정조: 준론 탕평과 규장각/장용영
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="list-disc list-inside ml-4 space-y-3 text-lg text-gray-700">
+                            <li><span class="font-bold">준론 탕평:</span> 성리학적 옳고 그름에 따라 <span class="font-bold">인재를 가려 등용</span>하는 <span class="font-bold">과감한 방식</span>을 추진했습니다. 서얼 출신 등 소외 세력을 적극 발탁했습니다.</li>
+                            <li><span class="font-bold">왕권 강화:</span> 왕실 도서관 <span class="font-bold">규장각</span>과 친위 부대 <span class="font-bold">장용영</span>을 설치하여 왕권을 직접 뒷받침했습니다.</li>
+                            <li><span class="font-bold">개혁 도시:</span> 자신의 정치적 이상을 실현하기 위한 신도시 <span class="font-bold">수원 화성</span>을 건설했습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="p-4 bg-emerald-50 rounded-xl text-base italic text-gray-700 h-full">
+                            사료: “암행어사가 있으므로 논밭을 잘 갈았는지 못 갈았는지 조사하여 상도 주고 벌도 줄 수 있느니, 감히 소홀히 할 수 있겠는가.” (향촌 안정을 위한 강한 개입 의지)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4단계: 세도 정치 (국가의 쇠퇴) -->
+    <section id="section4" class="min-h-screen py-24 px-4 md:px-12 bg-pastel-sky">
+        <div class="max-w-4xl mx-auto">
+            <div class="scroll-animate mb-20 text-center" style="--delay:0.1s;">
+                <h2 class="text-5xl font-extrabold text-red-800 mb-4 inline-block pb-1">
+                    여정 IV. 세도 정치, 기강이 무너지다
+                </h2>
+                <p class="text-xl text-gray-700">
+                    정조 사후 60여 년간 지속된 외척 가문의 독점과 그로 인한 삼정의 문란.
+                </p>
+            </div>
+
+            <!-- 세도 정치 카드 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.3s;">
+                <h3 class="text-3xl font-black text-red-700 mb-4 flex items-center">
+                    <span class="mr-3 text-4xl">🛑</span> 외척 가문의 독점과 매관매직
+                </h3>
+                <p class="text-lg text-gray-700">
+                    순조, 헌종, 철종의 <span class="font-bold">3대, 60여 년간</span> <span class="font-bold text-red-600">안동 김씨, 풍양 조씨</span> 등 소수의 왕실 외척 가문이 비변사를 중심으로 권력을 장악하고, 주요 관직을 사고파는 <span class="font-bold">매관매직</span>을 일삼아 정치 기강이 극도로 해이해졌습니다.
+                </p>
+                <div class="mt-4 p-4 bg-red-50 rounded-xl text-base italic text-gray-700">
+                    암행어사의 타락: 세도 정치 시기 암행어사 파견 횟수가 줄고, 일부 암행어사는 수령의 비리를 오히려 비호하는 등 <span class="font-bold">감찰 기능마저 마비</span>되었습니다.
+                </div>
+            </div>
+
+            <!-- 삼정의 문란 & 농민 봉기 -->
+            <div class="history-card bg-white/95 p-8 rounded-3xl mb-12 scroll-animate" style="--delay:0.5s;">
+                <h3 class="text-3xl font-black text-red-700 mb-4 flex items-center">
+                    <span class="mr-3 text-4xl">💸</span> 삼정의 문란과 민중의 분노
+                </h3>
+                <p class="text-lg text-gray-700 mb-4">
+                    세도 가문과 결탁한 탐관오리들의 수탈로 <span class="font-bold">삼정(전정, 군정, 환곡)</span>이 문란해졌습니다. 특히 <span class="font-bold">환곡</span> (빈민 구제 제도)이 이자 놀이의 수단으로 변질되면서 농민의 고통이 극에 달했습니다.
+                </p>
+                <div class="mt-6 border-t pt-4 border-red-300">
+                    <h4 class="text-xl font-bold text-rose-700 mb-2">대규모 농민 봉기</h4>
+                    <p class="text-gray-800 text-base">
+                        탐관오리의 수탈과 지역 차별에 맞서 1811년 <span class="font-bold">홍경래의 난</span> (평안도 지역 차별과 수탈)이 발생했고, 1862년에는 전국적으로 <span class="font-bold">임술 농민 봉기</span>가 확산되며 조선 왕조의 쇠퇴를 가속화했습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 에필로그 -->
+    <footer class="py-16 px-4 text-center bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-yellow-300 mb-4 scroll-animate" style="--delay:0.2s;">
+                ✅ 조선 후기 정치 탐험 완료
+            </h3>
+            <p class="text-xl text-gray-300 scroll-animate" style="--delay:0.4s;">
+                혼란과 개혁, 그리고 쇠퇴가 공존했던 조선 후기의 격변 과정을 성공적으로 여행하였습니다.
+            </p>
+            <p class="mt-8 text-sm text-gray-500">
+                &copy; 2025 역사 교육 콘텐츠(박경목) | 모든 콘텐츠는 학습 목적으로 제작되었습니다.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const scrollElements = document.querySelectorAll(".scroll-animate");
+        const navItems = document.querySelectorAll(".nav-item");
+        const sections = document.querySelectorAll("section[id]");
+
+        // 스크롤 애니메이션
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop <= window.innerHeight * 0.8) {
+                    el.classList.add("active");
+                }
+            });
+        };
+
+        // 네비게이션 활성화
+        const handleNavActivation = () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navItems.forEach((a) => {
+                a.classList.remove("active");
+                if (a.getAttribute("href").includes(current)) {
+                    a.classList.add("active");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+            handleNavActivation();
+        });
+
+        window.addEventListener("load", () => {
+            handleScrollAnimation();
+            handleNavActivation();
+        });
+    </script>
+</body>
+</html>
